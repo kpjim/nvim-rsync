@@ -158,12 +158,12 @@ end
 
 function M.statusline()
   if not M.enabled then
-    return " Sync OFF"
+    return "%#DiagnosticError# Sync off%*"
   end
   if M._running then
     return " Syncing…"
   end
-  return " Sync ON"
+  return "%#DiagnosticOk# Sync on%*"
 end
 
 --------------------------------------------------
